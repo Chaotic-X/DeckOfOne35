@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="00z-FV-EQh">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="e8I-V8-W9l">
+            <objects>
+                <viewController id="00z-FV-EQh" customClass="CardViewController" customModule="DeckOfOne35" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wfB-J2-iVC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="a59-Fj-oDL">
+                                <rect key="frame" x="51.666666666666657" y="92.666666666666686" width="310.66666666666674" height="440.00000000000006"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eHP-ca-Rmm">
+                                        <rect key="frame" x="29.333333333333343" y="0.0" width="252.00000000000003" height="350"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="eHP-ca-Rmm" secondAttribute="height" multiplier="2.26:3.14" id="2GX-8r-PIA"/>
+                                            <constraint firstAttribute="height" constant="350" id="ojX-Oh-Wh9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHc-46-gGu">
+                                        <rect key="frame" x="130.33333333333334" y="370" width="50" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="Ahi-bE-WnX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xn6-QH-p9X">
+                                        <rect key="frame" x="77.6666666666667" y="408" width="155.33333333333337" height="32"/>
+                                        <color key="backgroundColor" name="buttonbackground"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="Draw Card">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="drawCardButtonTapped:" destination="00z-FV-EQh" eventType="touchUpInside" id="EKz-nd-k4E"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Xn6-QH-p9X" firstAttribute="width" secondItem="a59-Fj-oDL" secondAttribute="width" multiplier="0.5" id="3zE-eM-EEe"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="greenfelt"/>
+                        <constraints>
+                            <constraint firstItem="a59-Fj-oDL" firstAttribute="centerY" secondItem="h1P-AD-dDI" secondAttribute="centerY" multiplier="0.85" id="39k-8x-9lr"/>
+                            <constraint firstItem="a59-Fj-oDL" firstAttribute="width" secondItem="wfB-J2-iVC" secondAttribute="width" multiplier="0.75" id="elM-Uu-ORG"/>
+                            <constraint firstItem="a59-Fj-oDL" firstAttribute="centerX" secondItem="h1P-AD-dDI" secondAttribute="centerX" id="qeJ-ho-0DW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h1P-AD-dDI"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardImage" destination="eHP-ca-Rmm" id="H1E-Is-TVQ"/>
+                        <outlet property="suitLabel" destination="SHc-46-gGu" id="uXP-5u-iwJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LeB-IM-Xo4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18" y="140"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="buttonbackground">
+            <color red="0.11030421406030655" green="0.15407769381999969" blue="0.1750972718000412" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="greenfelt">
+            <color red="0.1783771925" green="0.27445195020000002" blue="0.26745520099999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
